@@ -1,6 +1,7 @@
 package ptt
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"strings"
@@ -75,7 +76,7 @@ func ParseLinkByPage(resp *http.Response) []Post {
 			strings.TrimSpace(title),
 			strings.TrimSpace(author),
 			strings.TrimSpace(date),
-			strings.TrimSpace(link),
+			fmt.Sprintf("https://www.ptt.cc/%s", strings.TrimSpace(link)),
 			strings.TrimSpace(score),
 		}
 
