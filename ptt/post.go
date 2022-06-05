@@ -22,6 +22,7 @@ type Article struct {
 	Author                        string
 	Date                          string
 	Content                       string
+	Link                          string
 	Pushes                        []Push
 	Score, Count, Up, Down, Arrow int
 }
@@ -99,6 +100,7 @@ func ParsePostPage(p *Post) *Article {
 	article.Title = p.Title
 	article.Author = p.Author
 	article.Date = p.Date
+	article.Link = p.Link
 
 	return article
 }
