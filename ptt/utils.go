@@ -13,10 +13,7 @@ const pttURL = "https://www.ptt.cc/bbs"
 func CreateIndexPageUrl(board string) string {
 
 	url := fmt.Sprintf("%s/%s/index.html", pttURL, board)
-	// if r, err := IsValidUrl(url); !r {
-	// 	log.Printf("%v", r)
-	// 	log.Fatal("url parse failed, error: ", err)
-	// }
+
 	return url
 }
 

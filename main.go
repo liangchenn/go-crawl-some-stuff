@@ -14,6 +14,6 @@ func main() {
 	board := strings.ToUpper("fapl")
 	data := ptt.GetLinksByBoard(board)
 	// fmt.Println(data)
-	file, _ := json.MarshalIndent(data, "", "")
+	file, _ := json.MarshalIndent(data, "", "	")
 	_ = ioutil.WriteFile("page.json", file, 0644)
 }

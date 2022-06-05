@@ -71,13 +71,6 @@ func ParseLinkByPage(resp *http.Response) []Post {
 			score = "0"
 		}
 
-		// data.Title = strings.TrimSpace(title)
-		// data.Link = strings.TrimSpace(link)
-		// data.Author = strings.TrimSpace(author)
-		// data.Date = strings.TrimSpace(date)
-		// data.Score = strings.TrimSpace(score)
-
-		// fmt.Printf("%+v\n", data)
 		posts[i] = Post{
 			strings.TrimSpace(title),
 			strings.TrimSpace(author),
@@ -94,7 +87,6 @@ func ParseLinkByPage(resp *http.Response) []Post {
 func GetLinksByBoard(board string) []Post {
 
 	resp := fetchUrlByBoard(board)
-
 	data := ParseLinkByPage(resp)
 
 	return data
