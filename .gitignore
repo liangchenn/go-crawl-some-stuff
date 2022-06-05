@@ -1,3 +1,7 @@
+# data files
+data/
+*.html
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
